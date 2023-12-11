@@ -16,7 +16,8 @@ Resources:
         - !Ref safiyesecgrp
       Tags:
         - Key: Name
-          Value: safiye
+          Value:
+            Fn::Sub: "Web Server of ${AWS::StackName}"
 
       UserData:
         Fn::Base64: |
